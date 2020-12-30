@@ -1,0 +1,26 @@
+$primary: #0984e3;
+
+$danger: #d63031;
+$warning: #f9ca24;
+$success: #16a085;
+$info: #7f8c8d;
+
+
+
+$colors: (
+        primary: $primary,
+        danger: $danger,
+        warning: $warning,
+        success: $success,
+        info: $info,
+);
+
+
+$font-family: sans-serif;
+
+//Button Vars
+$button-text-color: #fff;
+$button-font-size: 1.3rem;
+$button-padding: 5px 15px;
+$button-border: 2px solid $primary;
+$button-border-radius: 4px;
