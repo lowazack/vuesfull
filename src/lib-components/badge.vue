@@ -28,9 +28,12 @@
                 }
                 let height = this.$refs.badge.offsetHeight;
 
+                height = (height * 2) / 2
+
                 return {
-                    // minWidth: height,
-                    borderRadius: `${height}px`
+                    minWidth: `${height}px`,
+                    height: `${height}px`,
+                    borderRadius: `${height + 3}px`
                 }
             }
         },
@@ -58,9 +61,10 @@
         align-items: center;
         justify-content: center;
         font-size: 0.9rem;
-        padding: 4px;
+        padding: 2px;
         font-family: $font-family;
         box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+        line-height: 1;
 
         @each $name, $color in $colors {
             &--#{$name} {

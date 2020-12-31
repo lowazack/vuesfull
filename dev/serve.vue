@@ -1,13 +1,14 @@
 <script>
 import Vue from 'vue';
-import {Button, Badge, Avatar } from '@/entry';
+import {Button, Badge, Avatar, Card } from '@/entry';
 
 export default Vue.extend({
   name: 'ServeDev',
   components: {
     Button,
     Badge,
-    Avatar
+    Avatar,
+    Card
   }
 });
 </script>
@@ -73,5 +74,21 @@ export default Vue.extend({
 
       />
     </div>
+
+    <h2>Card</h2>
+    <div class="card-grid">
+      <Card image="https://images.unsplash.com/photo-1609349589857-e5a172725169?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" destination="https://www.reddit.com"/>
+      <Card :lineLimit="4" destination="https://www.reddit.com" target="_blank"/>
+    </div>
   </div>
 </template>
+
+<style lang="scss">
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+    max-width: 350px;
+  }
+</style>
