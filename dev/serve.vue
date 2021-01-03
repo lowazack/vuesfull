@@ -1,6 +1,7 @@
 <script>
 import Vue from 'vue';
-import {Button, Badge, Avatar, Card } from '@/entry';
+import {Button, Badge, Avatar, Card, Modal } from '@/entry';
+import ModalContent from './modalContent'
 
 export default Vue.extend({
   name: 'ServeDev',
@@ -8,8 +9,10 @@ export default Vue.extend({
     Button,
     Badge,
     Avatar,
-    Card
-  }
+    Card,
+    Modal,
+    ModalContent
+  },
 });
 </script>
 
@@ -77,9 +80,27 @@ export default Vue.extend({
 
     <h2>Card</h2>
     <div class="card-grid">
-      <Card image="https://images.unsplash.com/photo-1609349589857-e5a172725169?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" destination="https://www.reddit.com"/>
-      <Card :lineLimit="4" destination="https://www.reddit.com" target="_blank"/>
+      <Card
+              image="https://images.unsplash.com/photo-1609349589857-e5a172725169?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              destination="https://www.reddit.com"
+      />
+      <Card
+              :lineLimit="4"
+              destination="https://www.reddit.com"
+              target="_blank"
+      />
     </div>
+
+    <h2>Modal</h2>
+    <button @click="$root.$emit('openModal', 'modal1')">Open Modal 1</button>
+    <button @click="$root.$emit('openModal', 'modal2')">Open Modal 2</button>
+
+    <Modal modal-id="modal1">
+      <ModalContent/>
+    </Modal>
+    <Modal modal-id="modal2">
+      <h1>Modal 2</h1>
+    </Modal>
   </div>
 </template>
 

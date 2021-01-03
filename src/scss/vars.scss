@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+
 $primary: #0984e3;
 
 $danger: #d63031;
@@ -18,13 +23,12 @@ $colors: (
 
 $font-family: sans-serif;
 
-//Button Vars
 $button-text-color: #fff;
 $button-font-size: 1.3rem;
 $button-padding: 5px 15px;
 $button-border: 2px solid $primary;
 $button-border-radius: 4px;
 
-//Card Vars
+
 $card-bg-color: #f7f8f9;
 $card-border-radius: 8px;
